@@ -98,12 +98,34 @@ public class DoWhile {
     // Exercice 12 -
 
 
-    public static void menu () {
+    public static void password() {
+
         Scanner scanner = new Scanner(System.in);
         int choice;
+
         do {
+            affichageMenu();
+            choice = scanner.nextInt();
+            if (choice == 1) {
+                System.out.println("Guess my password");
+            } else if (choice == 0 || choice > 2) {
+                System.out.println("Choice no valid");
+
+            }
+            while (choice != 2) ;
+            System.out.println("Exit");
+        }
+    }
+    public static void affichageMenu() {
+        System.out.println("What choice do you want to do?");
+        System.out.println("Choice 1: Guess my password");
+        System.out.println("Choice 2: Exit");
+    }
+}
 
 
 
-
+        public static void main(String[] args) {
+            password();
+        }
 }
