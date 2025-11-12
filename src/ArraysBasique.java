@@ -86,7 +86,7 @@ public class ArraysBasique {
 
     // Exercice 16 -
 
-        public static void notes (double[] array) {
+ /*       public static void differenceNotes (double[] array) {
             double result1 = 0;
 
             for ( int i=0; i < array.length; i++) {
@@ -96,24 +96,61 @@ public class ArraysBasique {
             result1= result1/array.length;
             System.out.println(result1);
 
-            int n = result1-array[i];   // boucle pour faire la différence entre moyenne et note
-                                        // for each à faire
-            System.out.println(n);
 
-
+//            int n = result1-array[i];   // boucle pour faire la différence entre moyenne et note
+            for (double difNote : array   ) {                          // for each à faire;
+                double n = difNote-result1;
+                System.out.println(n);
+            }
         }
 
-
-
             public static void main(String[] args) {
-              double []notes = {12,15,10,18,15};
-              notes(notes);
+              double[] notes = {12,15,10,18,15};
+                differenceNotes(notes);
             }
-
+*/
 
         
         // Exercice 17 -
 
+    public static void compare (int[] array) {
 
+//        int result = 0;
+//
+//
+//        for ( int i=0; i <= array.length; i++) {
+//             if (result >= i ) {
+//                System.out.println("Il y a " + result +" de nombres positifs");
+//            }    else if (result == i) {
+//                System.out.println("Il y a " + result +" de nombres nuls");
+//            } else{
+//                System.out.println("Il y a " + result +" de nombres négatifs");
+//            }
+//        }
 
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
+        for (int number : array) {
+            //            System.out.println(number);
+
+            if (number > 0 ) {
+                count1++;
+
+            } else if (number < 0) {
+                count2++;
+
+            } else {
+                count3++;
+
+            }
+        }       System.out.println("Il y a " + count3 +" de nombres nuls");
+                System.out.println("Il y a " + count2 +" de nombres négatifs");
+                System.out.println("Il y a " + count1 +" de nombres positifs");
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {12,15,-10,-18,0,3,4,-7,-6,0};
+        compare(numbers);
+    }
  }
