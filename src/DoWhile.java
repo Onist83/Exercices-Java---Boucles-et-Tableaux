@@ -33,7 +33,7 @@ public class DoWhile {
 
     // Exercice 11 -
 
- /*   public static void converter() {
+/*    public static void converter() {
 
         Scanner scanner = new Scanner(System.in);
         affichageMenu();
@@ -107,25 +107,44 @@ public class DoWhile {
             affichageMenu();
             choice = scanner.nextInt();
             if (choice == 1) {
-                System.out.println("Guess my password");
+                pass();
             } else if (choice == 0 || choice > 2) {
                 System.out.println("Choice no valid");
-
             }
-            while (choice != 2) ;
-            System.out.println("Exit");
+
+        } while (choice == 2);
+
+    }
+
+
+            public static void affichageMenu() {
+                System.out.println("What choice do you want to do?");
+                System.out.println("Choice 1: Password");
+                System.out.println("Choice 2: Exit");
+            }
+
+            public static void pass() {
+                Scanner scanner = new Scanner(System.in);
+                String pass; // 1
+                String pass2 = "Ytreza";
+
+                do {
+                    System.out.println("Type Password");
+                    pass = scanner.nextLine();
+                    if (!pass.equals(pass2)) { // Verif
+                    System.out.println("No Valid");
+                  }
+                } while (!pass.equals(pass2));
+
+                System.out.println("Valid");
+                System.out.println("Exit");
+                scanner.close();
         }
-    }
-    public static void affichageMenu() {
-        System.out.println("What choice do you want to do?");
-        System.out.println("Choice 1: Guess my password");
-        System.out.println("Choice 2: Exit");
-    }
-}
+
 
 
 
         public static void main(String[] args) {
             password();
         }
-}
+ }
