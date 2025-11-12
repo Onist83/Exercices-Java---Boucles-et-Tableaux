@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ArraysBasique {
+//public class ArraysBasique {
 
    /* // Exercice 13-
 // 2,5,3,8,1
@@ -113,7 +113,7 @@ public class ArraysBasique {
         
         // Exercice 17 -
 
-    public static void compare (int[] array) {
+/*    public static void compare (int[] array) {
 
 //        int result = 0;
 //
@@ -153,4 +153,4 @@ public class ArraysBasique {
         int[] numbers = {12,15,-10,-18,0,3,4,-7,-6,0};
         compare(numbers);
     }
- }
+ }*/
